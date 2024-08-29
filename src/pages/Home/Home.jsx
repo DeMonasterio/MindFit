@@ -8,7 +8,7 @@ function Home() {
     const handlecreateAccount = () => {
         setcreateAccount(!createAccount);
     } 
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         //Continuar con el submit
@@ -61,7 +61,7 @@ function Home() {
                             <button onClick={handlecreateAccount}>Iniciar sesion</button>
                         </section>
                         </> : <>
-                        <form onSubmit={handleSubmit}>
+                        <form className='formLogIn' onSubmit={handleSubmit}>
                             <label htmlFor="email">Correo Electronico:</label>
                             <input className='inputsLogin' type="email" id="email" />
                             <label htmlFor="password">Contraseña:</label>

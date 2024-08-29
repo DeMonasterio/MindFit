@@ -30,10 +30,10 @@
 .firstCard {
     position: relative;
     width: 67%;
+    padding: 1em 1em 1em 1.5em;
     gap: 1em;
     background-color: var(--primary-background-color);
     border-radius: 30px;
-  padding: 1em 1em 1em 1.5em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
 .alternativefirstCard{
     gap: 1em;
     width: 70%;
-  padding: 0 1em;
+    padding: 0 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,12 +63,20 @@
     border: none;
     border-radius: 30px;
     z-index: 100;
-}
-.secondCardPadding{
+  }
+  .secondCardPadding{
     padding: 9em 1em 0em 1em;
-}
-
-.formCreateAcc{
+  }
+  
+  .formCreateAcc{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  
+  .formLogIn{
+    width: 90%;
+    gap: 0.2em;
     display: flex;
     flex-direction: column;
     align-items: baseline;
