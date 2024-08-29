@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px red solid; */
+}
+.background{
+    background-color: var(--background-color);
+    height: 100vh;
+}
+
+.hero--header {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero--logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid red;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.firstCard {
+    position: relative;
+    width: 67%;
+    gap: 1em;
+    background-color: var(--primary-background-color);
+    border-radius: 30px;
+  padding: 1em 1em 1em 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  box-shadow: 0px 2px 4.7px rgba(0, 0, 0, 0.24);
+}
+
+.alternativefirstCard{
+    gap: 1em;
+    width: 70%;
+  padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondCard {
+    background-color: var(--secondary-background-color);
+    box-shadow: 0px 2px 4.7px rgba(0, 0, 0, 0.24);
+    position: absolute;
+    /* top: 10em; */
+    padding: 6em 1em 1em 1em;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    z-index: 100;
+}
+.secondCardPadding{
+    padding: 9em 1em 0em 1em;
+}
+
+.formCreateAcc{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.inputsLogin {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
