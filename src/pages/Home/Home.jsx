@@ -7,7 +7,8 @@ function Home() {
     const [createAccount, setcreateAccount] = useState(false)
     const handlecreateAccount = () => {
         setcreateAccount(!createAccount);
-    }
+    } 
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         //Continuar con el submit
