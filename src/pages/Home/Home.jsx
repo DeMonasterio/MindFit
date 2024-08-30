@@ -17,7 +17,7 @@ function Home() {
         <div className='background'>
             <header className="hero--header">
                 <div className="hero--logo">
-                    <h1>MindFit</h1>
+                    <h1 className='hero--logo--font'>MindFit</h1>
                     <img src={MindfitLogo}></img>
                 </div>
                 <h2>Equilibra tu vida digital y personal</h2>
@@ -35,9 +35,9 @@ function Home() {
                             <p>Unete ahora</p>
                             <form className='formCreateAcc' onSubmit={handleSubmit}>
                             <label htmlFor="username">Nombre de Usuario:</label>
-                            <input type="text" name="username" id="username" />
+                            <input className='inputsLogin' type="text" name="username" id="username" />
                             <label htmlFor="birthday">Fecha de Nacimiento:</label>
-                            <input type="date" name="birthday" id="birthday" />
+                            <input className='inputsLogin' type="date" name="birthday" id="birthday" />
                             <label htmlFor="email">Correo Electronico:</label>
                             <input className='inputsLogin' type="email" id="email" />
                             <label htmlFor="password">Contraseña:</label>
@@ -63,9 +63,9 @@ function Home() {
                         </> : <>
                         <form className='formLogIn' onSubmit={handleSubmit}>
                             <label htmlFor="email">Correo Electronico:</label>
-                            <input className='inputsLogin' type="email" id="email" />
+                            <input className='inputsLogin' type="email" id="email" placeholder='example@mail.com' />
                             <label htmlFor="password">Contraseña:</label>
-                            <input className='inputsLogin' type="password" name="password" id="password" />
+                            <input className='inputsLogin' type="password" name="password" id="password" placeholder='***********' />
 
                             <Link to="/about">Recuperar contraseña?</Link>
 

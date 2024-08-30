@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Raleway";
+  font-weight: 400;
   /* outline: 1px red solid; */
 }
 .background{
@@ -11,15 +15,25 @@
 .hero--header {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
 .hero--logo {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  width: 100%;
-  border-bottom: 2px solid red;
+  align-items: center;
+  width: 75%;
+  border-bottom: 2px solid black;
 }
+.hero--logo--font{
+  padding-top: 1.8em;
+  padding-right: 0.5em;
+  font-family: "Raleway";
+  font-weight: 400;
+
+}
+
 
 .cardsContainer {
   display: flex;
@@ -29,8 +43,9 @@
 
 .firstCard {
     position: relative;
-    width: 67%;
-    padding: 1em 1em 1em 1.5em;
+    width: 70%;
+    /* padding: 1em 1em 1em 1.5em; */
+    padding: 1em 1em;
     gap: 1em;
     background-color: var(--primary-background-color);
     border-radius: 30px;
@@ -42,9 +57,10 @@
 }
 
 .alternativefirstCard{
-    gap: 1em;
-    width: 70%;
-    padding: 0 1em;
+  gap: 1em;
+  transition: 13s all;
+    /* width: 70%; */
+    /* padding: 0 1em; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,7 +100,12 @@
 
 .inputsLogin {
   border: none;
+  background-color: transparent;
   border-bottom: 1px solid black;
+}
+.inputsLogin:focus{
+  border: none;
+  input-security: none;
 }
 
 a {
