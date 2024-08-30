@@ -1,85 +1,23 @@
-import { Link } from 'react-router-dom';
 import "./Home.css";
 import MindfitLogo from "../../assets/MindfitLogo.svg";
-import { useState } from 'react';
+import FormRegIng from "../../components/RegistroIngreso/FormIngreso.jsx"
 
 function Home() {
-    const [createAccount, setcreateAccount] = useState(false)
-    const handlecreateAccount = () => {
-        setcreateAccount(!createAccount);
-    } 
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        //Continuar con el submit
-    }
     return (
-        <div className='background'>
-            <header className="hero--header">
+        <>
+            <header className="hero--header background">
                 <div className="hero--logo">
                     <h1 className='hero--logo--font'>MindFit</h1>
-                    <img src={MindfitLogo}></img>
+                    <img src={MindfitLogo} alt="Mindfit Logo" />
                 </div>
-                <h2>Equilibra tu vida digital y personal</h2>
+                <h2 className='hero--logo--subtitle'>"Equilibra tu vida digital y personal"</h2>
             </header>
-            <main>
-
-
-
-
-                <div className="cardsContainer">
-
-                    <section className="firstCard" >
-                        {createAccount ? <>
-                        
-                            <p>Unete ahora</p>
-                            <form className='formCreateAcc' onSubmit={handleSubmit}>
-                            <label htmlFor="username">Nombre de Usuario:</label>
-                            <input className='inputsLogin' type="text" name="username" id="username" />
-                            <label htmlFor="birthday">Fecha de Nacimiento:</label>
-                            <input className='inputsLogin' type="date" name="birthday" id="birthday" />
-                            <label htmlFor="email">Correo Electronico:</label>
-                            <input className='inputsLogin' type="email" id="email" />
-                            <label htmlFor="password">Contraseña:</label>
-                            <input className='inputsLogin' type="password" name="password" id="password" />
-
-                            <button type="submit">Crear cuenta</button>
-                            </form>
-                        </> :<>
-                        <section className='alternativefirstCard'>
-                        <p>Unete ahora</p>
-                        <button onClick={handlecreateAccount}>Crear cuenta</button>
-                        </section>
-                        </>
-                        }
-                    </section>
-                    <article className='secondCard'>
-
-                        {createAccount ? <>
-                        <section className='secondCardPadding'>
-                            <p>Ya tienes una cuenta?</p>
-                            <button onClick={handlecreateAccount}>Iniciar sesion</button>
-                        </section>
-                        </> : <>
-                        <form className='formLogIn' onSubmit={handleSubmit}>
-                            <label htmlFor="email">Correo Electronico:</label>
-                            <input className='inputsLogin' type="email" id="email" placeholder='example@mail.com' />
-                            <label htmlFor="password">Contraseña:</label>
-                            <input className='inputsLogin' type="password" name="password" id="password" placeholder='***********' />
-
-                            <Link to="/about">Recuperar contraseña?</Link>
-
-                            <button type="submit">Iniciar Sesion</button>
-                        </form>
-                        </> 
-                        }
-                    </article>
-                </div>
-
-
+            <main className='main--body background'>
+                <FormRegIng/>
+               
             </main>
-
-        </div>
+        </>
     );
 }
 
