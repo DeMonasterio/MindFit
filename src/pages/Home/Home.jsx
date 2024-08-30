@@ -22,7 +22,7 @@ function Home() {
                 </div>
                 <h2>Equilibra tu vida digital y personal</h2>
             </header>
-            <body>
+            <main>
 
 
 
@@ -77,7 +77,7 @@ function Home() {
                 </div>
 
 
-            </body>
+            </main>
 
         </div>
     );
