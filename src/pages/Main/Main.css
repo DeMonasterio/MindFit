@@ -1,0 +1,26 @@
+
+
+*{
+    /* outline: 1px solid red; */
+}
+
+
+.home--header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 0.5em;
+}
+
+.home--header--logo{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    max-width: min-content;
+    /* align-items: baseline; */
+}
+
+
+.home--header--image{
+    max-width: 35%;
+}

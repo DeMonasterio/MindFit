@@ -1,0 +1,29 @@
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    bottom:0;
+    background-color: var(--primary-background-color);
+    border-top: 2px solid black;
+    padding: 1em;
+}
+
+.nav--home{
+    display: flex;
+    max-width: 30px;
+}
+.nav--lupa{
+    display: flex;
+    max-width: 30px;
+}
+
+.hero--user{
+    display: flex;
+    border-radius: 30px;
+    background-color: black;
+    min-width: 30px;
+    max-width: 30px;
+}
