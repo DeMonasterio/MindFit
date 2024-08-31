@@ -24,3 +24,11 @@
 .home--header--image{
     max-width: 35%;
 }
+
+
+.home--main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 6em;
+}

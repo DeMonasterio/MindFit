@@ -36,7 +36,7 @@ html{
 .hero--logo--subtitle{
   font-family: "Caveat";
   color: #2ECC71;
-  font-size: clamp(0.5em, 9vw, 1.5em);;
+  font-size: clamp(0.5em, 9vw, 1.5em);
 }
 
 .main--body{
