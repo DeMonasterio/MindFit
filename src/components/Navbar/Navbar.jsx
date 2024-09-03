@@ -14,7 +14,7 @@ export const Navbar = () => {
         <Link to="/Search">
               <img className="nav--lupa" src={Lupa} alt="" />
         </Link>
-        <Link className="hero--user" to="/User"></Link>
+        <Link className="nav--user" to="/User"></Link>
         </nav>
         </>
     )
