@@ -1,0 +1,36 @@
+
+
+.createCarpetForm{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20vh;
+    gap: 1em;
+    font-size: clamp(0.3em, 6vw, 2.5em);
+    padding: 1.5em;
+    border-radius: 30px;
+    box-shadow: 0px 2px 4.7px rgba(0, 0, 0, 0.24);
+    background-color: var(--primary-background-color);
+    /* width: 100%; */
+}
+
+.inputCreateCarpet{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+}
+.buttonCreateCarpet{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-size: clamp(0.5em, 4vw, 1.5em);;
+    padding: 7px;
+    color: black;
+    align-self: center;
+}
+
+.buttonCreateCarpet:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+    background-color: var(--secondary-background-color);
+}
