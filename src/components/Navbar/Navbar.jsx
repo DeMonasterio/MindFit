@@ -11,6 +11,7 @@ export const Navbar = () => {
         <Link to="/Home">
               <img className="nav--home" src={Home} alt="" />
         </Link>
+        <button className="nav--publication" >+</button>
         <Link to="/Search">
               <img className="nav--lupa" src={Lupa} alt="" />
         </Link>

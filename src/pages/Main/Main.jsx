@@ -1,12 +1,21 @@
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import dataContext from '../../dataContext.jsx'; 
+import "./Main.css";
 import MindfitLogo from "../../assets/MindfitLogo.svg";
 import { Navbar } from "../../components/Navbar/Navbar.jsx";
 import { MakePublication } from "../../components/MakePublication/MakePublication.jsx";
-import { useContext } from "react";
-import "./Main.css";
-import dataContext from '../../dataContext.jsx'; 
 
-export default function Main() {
+export default function Main(user) {
     const { data, loading, error } = useContext(dataContext);
+    const navigate = useNavigate();
+    const userEmail = user.user;
+    useEffect(() => {
+        if (userEmail =="" || userEmail== undefined) {
+            navigate("/")
+        }
+      }, [navigate]);
+
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;

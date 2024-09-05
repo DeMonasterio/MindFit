@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
-const useAuth = () => {
+const useAuth = ( handlesetUser ) => {
     const navigate = useNavigate();
+    
 
     const handleSubmitRegister = async (e) => {
         e.preventDefault();
@@ -24,11 +25,12 @@ const useAuth = () => {
                 },
                 body: JSON.stringify({ username, email, password, birthday }),
             });
-
+            
             const data = await response.json();
-
+            
             if (response.ok) {
                 console.log(data.message);
+                handlesetUser.handlesetUser.handlesetUser(email)
                 navigate("/Home"); // Redirige a la página de inicio o a otra página
             } else {
                 console.error(data.message);
@@ -44,12 +46,12 @@ const useAuth = () => {
         const formData = new FormData(e.target);
         const email = formData.get('email');
         const password = formData.get('password');
-
+        
         if (email === "" || password === "") {
             console.log("Ingrese Email y Contraseña");
             return;
         }
-
+        
         try {
             const response = await fetch('https://11wkqwhb-5000.brs.devtunnels.ms/api/users/login', {
                 method: 'POST',
@@ -60,9 +62,11 @@ const useAuth = () => {
             });
 
             const data = await response.json();
-
+            
             if (response.ok) {
                 console.log(data.message);
+                handlesetUser.handlesetUser.handlesetUser(email)
+                
                 navigate("/Home"); // Redirige a la página de inicio o a otra página
             } else {const handleSubmitRegister = async (e) => {
                 e.preventDefault();

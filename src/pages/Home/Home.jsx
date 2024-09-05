@@ -2,8 +2,7 @@ import "./Home.css";
 import MindfitLogo from "../../assets/MindfitLogo.svg";
 import FormRegIng from "../../components/RegistroIngreso/FormIngreso.jsx"
 
-function Home() {
-
+function Home(handlesetUser) {
     return (
         <>
             <header className="hero--header background">
@@ -14,7 +13,7 @@ function Home() {
                 <h2 className='hero--logo--subtitle'>"Equilibra tu vida digital y personal"</h2>
             </header>
             <main className='main--body background'>
-                <FormRegIng/>
+                <FormRegIng  handlesetUser={handlesetUser} />
                
             </main>
         </>

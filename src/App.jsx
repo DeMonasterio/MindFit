@@ -5,17 +5,20 @@ import Search from "./pages/Search/Search.jsx";
 import User from "./pages/User/User.jsx";
 import NotDefined from './pages/NotDefined/NotDefined.jsx';
 import { DataProvider } from './dataContext.jsx';
+import { useState } from 'react';
 
 function App() {
+  const [user, setUser] = useState()
+    
   return (
     <>
       <DataProvider> 
         <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Home" element={<Main />} />
-            <Route path="/Search" element={<Search />} />
-            <Route path="/User" element={<User />} />
+            <Route path="/" element={<Home handlesetUser={setUser} />} />
+            <Route path="/Home" element={<Main  user={user}  />} />
+            <Route path="/Search" element={<Search  user={user}   />} />
+            <Route path="/User" element={<User  user={user}  />} />
             <Route path="*" element={<NotDefined />} />
           </Routes>
         </Router>

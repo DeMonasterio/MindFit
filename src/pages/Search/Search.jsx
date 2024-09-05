@@ -1,15 +1,24 @@
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Navbar } from "../../components/Navbar/Navbar.jsx";
 import CreateCarpet  from "../../components/CreateCarpet/CreateCarpet.jsx";
 import "./Search.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function Search() {
+function Search(user) {
+    const navigate = useNavigate();
+    const userEmail = user.user;
+    useEffect(() => {
+        if (userEmail =="" || userEmail== undefined) {
+            navigate("/")
+        }
+      }, [navigate]);
     const [createCarpet,setcreateCarpet] = useState(false)
     const handlecreateCarpet = () => {
         setcreateCarpet(!createCarpet)
     }
+
+    
 
     return (
         <>

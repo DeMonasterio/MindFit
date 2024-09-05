@@ -17,6 +17,16 @@
     display: flex;
     max-width: 30px;
 }
+.nav--publication{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 30px;
+    font-size: 30px;
+}
 .nav--lupa{
     display: flex;
     max-width: 30px;
