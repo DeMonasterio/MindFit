@@ -144,6 +144,21 @@ html{
   color: black;
   align-self: center;
 }
+.buttonAltSignUp:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+  box-shadow: 0px 2px 4.7px rgba(0, 0, 0, 0.541);
+}
+.buttonLogIn:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+  box-shadow: 0px 2px 4.7px rgba(0, 0, 0, 0.541);
+}
+.buttonSignUp:hover{
+  box-shadow: 0px 2px 4.7px rgba(0, 0, 0, 0.541);
+  transform: scale(1.1);
+  transition: 0.5s;
+}
 .inputsLogin {
   border: none;
   background-color: transparent;

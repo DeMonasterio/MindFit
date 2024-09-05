@@ -1,0 +1,13 @@
+
+
+
+.user--header--username{
+    font-size: clamp(0.5em, 10vw, 1.5em);
+    width: max-content;
+
+}
+
+.User--main{
+    width: fit-content;
+    text-wrap: stable;
+}

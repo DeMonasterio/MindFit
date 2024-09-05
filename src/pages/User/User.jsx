@@ -7,7 +7,8 @@ import { useEffect } from "react";
 function User(user) {
     const navigate = useNavigate();
 
-    const userEmail = user.user;
+    const userEmail = user.user.email;
+    const username= user.user.username;
     
     useEffect(() => {
         if (userEmail =="" || userEmail== undefined) {
@@ -18,11 +19,9 @@ function User(user) {
     return (
         <>
             <header>
-                <h1>Perfil de usuario:</h1>
+                <h1 className="user--header--username">{username}</h1>
             </header>
             <main className="User--main">
-                <h1>{userEmail}</h1>
-    
             </main>
             <Navbar />
         </>
