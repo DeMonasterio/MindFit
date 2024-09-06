@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
-const useAuth = ( handlesetUser ) => {
+const useAuth = ( handlesetUser, handletoastData ) => {
     const navigate = useNavigate();
-    const APIURL = "https://ubiquitous-space-orbit-x749j7jg7vw26rrj-5000.app.github.dev";
+    // const APIURL = "https://ubiquitous-space-orbit-x749j7jg7vw26rrj-5000.app.github.dev";
+    const APIURL = "https://11wkqwhb-5000.brs.devtunnels.ms";
 
     const handleSubmitRegister = async (e) => {
         e.preventDefault();
@@ -31,13 +32,16 @@ const useAuth = ( handlesetUser ) => {
             if (response.ok) {
                 console.log(data.message);
                 handlesetUser.handlesetUser.handlesetUser({username, email})
+                handletoastData.handletoastData(data)
                 navigate("/Home"); // Redirige a la página de inicio o a otra página
             } else {
                 console.error(data.message);
+                handletoastData.handletoastData(data)
             }
         } catch (error) {
             console.log(data.message);
             console.error('Error:', error);
+            handletoastData.handletoastData(data)
         }
     };
 
@@ -67,6 +71,7 @@ const useAuth = ( handlesetUser ) => {
             if (response.ok) {
                 console.log(data.message);
                 handlesetUser.handlesetUser.handlesetUser(email)
+                handletoastData.handletoastData(data)
                 
                 navigate("/Home"); // Redirige a la página de inicio o a otra página
             } else {const handleSubmitRegister = async (e) => {
@@ -95,19 +100,24 @@ const useAuth = ( handlesetUser ) => {
             
                     if (response.ok) {
                         console.log(data.message);
+                        handletoastData.handletoastData(data)
                         navigate("/Home"); // Redirige a la página de inicio o a otra página
                     } else {
                         console.error(data.message);
+                        handletoastData.handletoastData(data)
                     }
                 } catch (error) {
                     console.error('Error:', error);
+                    handletoastData.handletoastData(data)
                 }
             };
             
                 console.error(data.message);
+                handletoastData.handletoastData(data)
             }
         } catch (error) {
             console.error('Error:', error);
+            handletoastData.handletoastData(data)
         }
     };
 

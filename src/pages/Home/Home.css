@@ -164,11 +164,6 @@ html{
   background-color: transparent;
   border-bottom: 1px solid black;
 }
-.inputsLogin:focus{
-  border: none;
-  input-security: none;
-}
-
 a {
   text-decoration: none;
   color: black;

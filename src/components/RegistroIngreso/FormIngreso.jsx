@@ -2,11 +2,11 @@ import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth.jsx';
 
-function FormRegIng( handlesetUser) {
+function FormRegIng( handlesetUser, handletoastData) {
     const [createAccount, setCreateAccount] = useState(false);
     const secondCardRef = useRef(null);
     const containerRef = useRef(null);
-    const { handleSubmitRegister, handleSubmitLogin } = useAuth(handlesetUser);
+    const { handleSubmitRegister, handleSubmitLogin } = useAuth(handlesetUser, handletoastData);
 
     const handleCreateAccount = () => {
         setCreateAccount(!createAccount);
