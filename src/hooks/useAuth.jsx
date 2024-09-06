@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
-const useAuth = ( handlesetUser, handletoastData ) => {
+const useAuth = ( {handlesetUser, settoastData}) => {
     const navigate = useNavigate();
-    // const APIURL = "https://ubiquitous-space-orbit-x749j7jg7vw26rrj-5000.app.github.dev";
-    const APIURL = "https://11wkqwhb-5000.brs.devtunnels.ms";
+    const APIURL = "https://ubiquitous-space-orbit-x749j7jg7vw26rrj-5000.app.github.dev";
+    // const APIURL = "https://11wkqwhb-5000.brs.devtunnels.ms";
 
     const handleSubmitRegister = async (e) => {
         e.preventDefault();
@@ -31,20 +31,20 @@ const useAuth = ( handlesetUser, handletoastData ) => {
             
             if (response.ok) {
                 console.log(data.message);
-                handlesetUser.handlesetUser.handlesetUser({username, email})
-                handletoastData.handletoastData(data)
+                handlesetUser({username, email})
+                settoastData(data)
                 navigate("/Home"); // Redirige a la página de inicio o a otra página
             } else {
                 console.error(data.message);
-                handletoastData.handletoastData(data)
             }
         } catch (error) {
             console.log(data.message);
             console.error('Error:', error);
-            handletoastData.handletoastData(data)
+            settoastData(data)
+    
         }
     };
-
+    
     const handleSubmitLogin = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
@@ -65,13 +65,15 @@ const useAuth = ( handlesetUser, handletoastData ) => {
                 },
                 body: JSON.stringify({ username, email, password }),
             });
-
+            
             const data = await response.json();
             
             if (response.ok) {
                 console.log(data.message);
-                handlesetUser.handlesetUser.handlesetUser(email)
-                handletoastData.handletoastData(data)
+                handlesetUser(email)
+                settoastData(data)
+                console.log();
+        
                 
                 navigate("/Home"); // Redirige a la página de inicio o a otra página
             } else {const handleSubmitRegister = async (e) => {
@@ -100,24 +102,24 @@ const useAuth = ( handlesetUser, handletoastData ) => {
             
                     if (response.ok) {
                         console.log(data.message);
-                        handletoastData.handletoastData(data)
+                        settoastData(data)
+                
                         navigate("/Home"); // Redirige a la página de inicio o a otra página
                     } else {
                         console.error(data.message);
-                        handletoastData.handletoastData(data)
+                        settoastData(data)
+                
                     }
                 } catch (error) {
                     console.error('Error:', error);
-                    handletoastData.handletoastData(data)
                 }
             };
-            
+                settoastData(data)
                 console.error(data.message);
-                handletoastData.handletoastData(data)
+        
             }
         } catch (error) {
             console.error('Error:', error);
-            handletoastData.handletoastData(data)
         }
     };
 
