@@ -33,7 +33,7 @@ const useAuth = ( {handlesetUser, settoastData}) => {
                 console.log(data.message);
                 handlesetUser({username, email})
                 settoastData(data)
-                navigate("/Home"); // Redirige a la página de inicio o a otra página
+                // navigate("/Home"); 
             } else {
                 console.error(data.message);
             }
@@ -75,7 +75,7 @@ const useAuth = ( {handlesetUser, settoastData}) => {
                 console.log();
         
                 
-                navigate("/Home"); // Redirige a la página de inicio o a otra página
+                // navigate("/Home"); 
             } else {const handleSubmitRegister = async (e) => {
                 e.preventDefault();
                 const formData = new FormData(e.target);
@@ -104,7 +104,7 @@ const useAuth = ( {handlesetUser, settoastData}) => {
                         console.log(data.message);
                         settoastData(data)
                 
-                        navigate("/Home"); // Redirige a la página de inicio o a otra página
+                        // navigate("/Home");
                     } else {
                         console.error(data.message);
                         settoastData(data)
