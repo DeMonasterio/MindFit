@@ -22,7 +22,7 @@ function Home({ handlesetUser }) {
                 <h2 className='hero--logo--subtitle'>"Equilibra tu vida digital y personal"</h2>
             </header>
             <main className='main--body background'>
-                <FormRegIng handlesetUser={handlesetUser} handlesetToastData={handleSetToastData} />
+                <FormRegIng handlesetUser={handlesetUser} handlesetToastData={handleSetToastData} />    
                
                 {toastData && (
                     <ToastNote 
