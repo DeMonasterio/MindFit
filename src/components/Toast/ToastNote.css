@@ -1,0 +1,10 @@
+.toastContainer{
+    position: relative;
+    z-index: 300;
+    width: 45%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 1em;
+}

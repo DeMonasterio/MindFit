@@ -1,7 +1,10 @@
+
+import "./ToastNote.css"
+
 function ToastNote({ dataToast}) {
    
     return (
-        <div>
+        <div className="toastContainer">
             <p>{dataToast}</p>
         </div>
     );
