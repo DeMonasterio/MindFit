@@ -1,10 +1,10 @@
 import React from 'react';
-import "./MakePublication.css";
+import "./UserFeed.css";
 
-export const MakePublication = ({ publication }) => {
+export const UserFeed = ({ publication }) => {
     const imageBase64 = publication.image 
         ? `data:image/jpeg;base64,${publication.image}` 
-        : null; // Asegúrate de que el tipo MIME sea correcto
+        : null;
 
     return (
         <article className="publication" key={publication._id}>

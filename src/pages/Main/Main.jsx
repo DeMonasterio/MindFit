@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import dataContext from '../../dataContext.jsx'; 
+import dataContext from '../../dataContext.jsx';
 import "./Main.css";
 import MindfitLogo from "../../assets/MindfitLogo.svg";
 import { Navbar } from "../../components/Navbar/Navbar.jsx";
@@ -11,10 +11,12 @@ export default function Main(user) {
     const navigate = useNavigate();
     const userEmail = user.user;
     useEffect(() => {
-        if (userEmail =="" || userEmail== undefined) {
+        if (userEmail == "" || userEmail == undefined) {
             navigate("/")
         }
-      }, [navigate]);
+        console.log(data);
+
+    }, [navigate]);
 
 
     if (loading) return <p>Loading...</p>;
@@ -29,7 +31,10 @@ export default function Main(user) {
                 </div>
             </header>
             <main className="home--main">
-                {data.map(publication => MakePublication(publication))}
+                {data.map(publication => (
+                    <MakePublication key={publication._id} publication={publication} />
+                ))}
+
             </main>
             <Navbar />
         </>

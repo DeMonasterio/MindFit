@@ -14,7 +14,7 @@ export const DataProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://66d25cd1184dce1713cd6e03.mockapi.io/mindfit/publications');
+        const response = await fetch('https://ubiquitous-space-orbit-x749j7jg7vw26rrj-5000.app.github.dev/api/post/get');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
