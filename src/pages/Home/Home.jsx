@@ -11,6 +11,7 @@ function Home({ handlesetUser }) {
     const handleSetToastData = (value) => {
         setToastData(value);
     };
+    
 
     return (
         <>
@@ -26,7 +27,7 @@ function Home({ handlesetUser }) {
                
                 {toastData && (
                     <ToastNote 
-                        dataToast={toastData.message}
+                        dataToast={toastData}
                     />
                 )}
             </main>

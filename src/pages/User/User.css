@@ -1,13 +1,32 @@
 
 
 
-.user--header--username{
+.User--main{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 0.5em;
+}
+.user--main--info{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    /* align-items: center; */
+}
+.user--main--image{
+    display: flex;
+    background-color: black;
+    width: 25vw;
+    border-radius: 30%;
+    height: 10vh;
+}
+.user--main--username{
     font-size: clamp(0.5em, 10vw, 1.5em);
     width: max-content;
 
 }
 
-.User--main{
-    width: fit-content;
-    text-wrap: stable;
+.user--main--posts{
+    display: flex;
+    flex-direction: row;
 }

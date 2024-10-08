@@ -5,7 +5,7 @@ function ToastNote({ dataToast}) {
    
     return (
         <div className="toastContainer">
-            <p>{dataToast}</p>
+            <p className="toast" >{dataToast}</p>
         </div>
     );
 }

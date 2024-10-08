@@ -3,7 +3,7 @@ import Home from './pages/Home/Home.jsx';
 import Main from './pages/Main/Main.jsx';
 import Search from "./pages/Search/Search.jsx";
 import User from "./pages/User/User.jsx";
-import Game from "./pages/Game.jsx";
+import Game from "./pages/Game/Game.jsx";
 import NotDefined from './pages/NotDefined/NotDefined.jsx';
 import { DataProvider } from './dataContext.jsx';
 import { useState } from 'react';

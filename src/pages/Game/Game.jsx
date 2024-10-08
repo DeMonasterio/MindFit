@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Game.css'
-import fly from '../assets/FLY.png'
+import fly from '../../assets/FLY.png'
 
 function Game() {
   const [isClicked, setIsClicked] = useState(0)

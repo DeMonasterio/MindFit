@@ -26,7 +26,7 @@ function Search(user) {
                 <h1>Buscador:</h1>
             </header>
             <main className="search--main">
-               { createCarpet ? <CreateCarpet/> :
+               { createCarpet ? <CreateCarpet user={user} /> :
                 <div onClick={handlecreateCarpet} className="search--newbox">
                     <p className="newboxcarpet">Crear carpeta</p>
                     <p className="newboxPlus">+</p>
