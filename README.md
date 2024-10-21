@@ -1,4 +1,4 @@
-# Minfit
+# Mindfit
 
 Este es el repositorio para el front end de la app Mindfit creada bajo la cursada en el IES 9-012.
 
