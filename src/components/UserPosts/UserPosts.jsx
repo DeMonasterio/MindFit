@@ -11,7 +11,7 @@ const UserPosts = ({ userId }) => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch(`https://ubiquitous-space-orbit-x749j7jg7vw26rrj-5000.app.github.dev/api/post/get/user/${userId}`)
+                const response = await fetch(`https://super-space-fortnight-6qprjqjxqg5h46jw-5000.app.github.dev/api/post/get/user/${userId}`)
                 if (!response.ok) {
                     throw new Error('Error fetching posts');
                 }

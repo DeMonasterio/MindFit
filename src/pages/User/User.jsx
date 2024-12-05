@@ -4,12 +4,12 @@ import UserPosts from "../../components/UserPosts/UserPosts.jsx";
 import "./User.css";
 import { useEffect } from "react";
 
-function User({ user }) {
+function User( user ) {
     const navigate = useNavigate();
     
-    const userEmail = user.email;
-    const username = user.username;
-    const userId = user._id; 
+    const userEmail = user.user.email;
+    const username = user.user.username;
+    const userId = user.user._id;
     useEffect(() => {
         if (userEmail === "" || userEmail === undefined) {
             navigate("/");
@@ -31,7 +31,7 @@ function User({ user }) {
                     <UserPosts userId={userId} />
                 </div>
             </main>
-            <Navbar />
+            <Navbar user={user} />
         </>
     );
 }

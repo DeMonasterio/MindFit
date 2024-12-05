@@ -5,9 +5,10 @@ import CreateCarpet  from "../../components/CreateCarpet/CreateCarpet.jsx";
 import "./Search.css";
 import { useEffect, useState } from "react";
 
-function Search(user) {
+function Search({user}) {
+    console.log(user)
     const navigate = useNavigate();
-    const userEmail = user.user;
+    const userEmail = user.email;
     useEffect(() => {
         if (userEmail =="" || userEmail== undefined) {
             navigate("/")
@@ -33,7 +34,7 @@ function Search(user) {
                 </div>
                } 
             </main>
-            <Navbar />
+            <Navbar user={user}/>
         </>
     );
 }

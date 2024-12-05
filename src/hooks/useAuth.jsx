@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 const useAuth = ({ handlesetUser, settoastData }) => {
     const navigate = useNavigate();
-    const APIURL = "https://ubiquitous-space-orbit-x749j7jg7vw26rrj-5000.app.github.dev";  
+    const APIURL = "https://super-space-fortnight-6qprjqjxqg5h46jw-5000.app.github.dev";  
     // const APIURL = "https://11wkqwhb-5000.brs.devtunnels.ms";
     // uaca161 adminies9012 
     const handleSubmitRegister = async (e) => {

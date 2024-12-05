@@ -28,5 +28,7 @@
 
 .user--main--posts{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
 }

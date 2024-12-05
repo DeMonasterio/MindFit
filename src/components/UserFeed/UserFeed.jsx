@@ -1,5 +1,6 @@
 import React from 'react';
 import "./UserFeed.css";
+import { Link } from 'react-router-dom';
 
 export const UserFeed = ({ publication }) => {
     const imageBase64 = publication.image 
@@ -7,8 +8,9 @@ export const UserFeed = ({ publication }) => {
         : null;
 
     return (
+        <Link to={`/Post/${publication._id}`}>
         <article className="publication" key={publication._id}>
-            <p className="publication--username">{publication.author.username}</p>
+            {/* <p className="publication--username">{publication.author.username}</p> */}
             {imageBase64 && (
                 <img 
                     src={imageBase64} 
@@ -27,5 +29,6 @@ export const UserFeed = ({ publication }) => {
                 ))}
             </div>
         </article>
+        </Link>
     );
 };

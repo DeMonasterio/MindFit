@@ -2,20 +2,22 @@ import "./NewPost.css";
 import useNewPost from "../../hooks/useNewPost.jsx";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../../components/Navbar/Navbar.jsx";
 
-function NewPost(user) {
+function NewPost({user}) {
     const navigate = useNavigate();
     const { handleUpload } = useNewPost();
-    const userEmail = user.user._id;
+    const userEmail = user.email;
     
     useEffect(() => {
-        console.log(userEmail);
         if (!userEmail) {
             navigate("/");
         }
     }, [userEmail, navigate]);
 
     return (
+        <>
+
         <form onSubmit={handleUpload}>
             <input type="text" name="title" placeholder="Title" required />
             <input type="text" name="content" placeholder="Content" required />
@@ -24,6 +26,8 @@ function NewPost(user) {
             <input type="file" name="image" accept="image/*" required />
             <button type="submit">Upload Post</button>
         </form>
+        <Navbar user={user}/>
+        </>
     );
 }
 

@@ -7,8 +7,8 @@ import { useState } from "react";
 
 
 
-export const Navbar = () => {
-
+export const Navbar = ({user}) => {
+let userId = user._id;
 const [isClickedNewPost, setisClickedNewPost] = useState();
 
 const handleOnClickNewPost = () => {
@@ -28,7 +28,7 @@ const handleOnClickNewPost = () => {
         <Link to="/Search">
               <img className="nav--lupa" src={Lupa} alt="" />
         </Link>
-        <Link className="nav--user" to="/User"></Link>
+        <Link className="nav--user" to={`/User/${userId}`}></Link>
         </nav>
         </>
     )

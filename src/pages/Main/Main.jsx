@@ -36,7 +36,7 @@ export default function Main(user) {
                 ))}
 
             </main>
-            <Navbar />
+            <Navbar user={user}/>
         </>
     );
 }
